@@ -29,3 +29,17 @@ function showNextParagraph() {
 }
 
 showNextParagraph();
+
+/*
+ * Back to top button
+ */
+
+const backTopBtn = document.querySelector(".back-top-btn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    backTopBtn.classList.add("active");
+  } else {
+    backTopBtn.classList.remove("active");
+  }
+});
