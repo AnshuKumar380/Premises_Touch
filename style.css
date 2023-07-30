@@ -108,16 +108,16 @@ nav .hero-btn a:hover, .about-text a:hover{
 /* main hero page styling */
 main{
     position: relative;
-    top: 85px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 5%;
+    padding: 100px 5%;
     background-color: var(--secondary-bg-clr);
 }
 
 .hero-text{
-    width: 50%;
+    width: 55%;
 }
 .hero-text p{
     font-size: var(--fs-6);
@@ -174,7 +174,7 @@ main{
     top: 100px;
     width: 100%;
     background-color: var(--primary-bg-clr);
-    padding: 50px 5%;
+    padding: 100px 5%;
 }
 
 .service-section h1, .about h1, .blog h1{
@@ -182,7 +182,7 @@ main{
     line-height: 3rem;
     font-weight: var(--fw-700);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .service-section h4{
     font-size: var(--fs-6);
@@ -242,7 +242,7 @@ main{
     width: 100%;
     position: relative;
     top: 100px;
-    padding: 50px 5%;
+    padding: 100px 5%;
     background-color: var(--secondary-bg-clr);
 }
 
@@ -277,10 +277,10 @@ main{
 /* blog section styling */
 .blog{
     width: 100%;
-    padding: 50px 5%;
+    padding: 100px 5%;
     position: relative;
     top: 100px;
-    background-color: var(--secondary-bg-clr2);
+    background-color: var(--primary-bg-clr);
 }
 
 .blog h4{
@@ -326,14 +326,14 @@ main{
 
 .blog-text{
     width: 90%;
-    background-color: var(--primary-bg-clr);
+    background-color: var(--secondary-bg-clr2);
     padding: 3%;
     border-radius: 0.5rem;
     position: absolute;
     top: 88%;
     left: 5%;
     box-shadow: var(--shadow-2);
-    height: 200px;
+    min-height: 220px;
     border-top: 1px solid var(--secondary-bg-clr2);
 }
 
