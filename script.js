@@ -1,5 +1,4 @@
-// import ScrollReveal from 'scrollreveal'
-
+// Changing text in hero section
 const textHolder = document.getElementById('textHolder');
 const paragraphs = [
     { text: "Do you have a dream? We will share it with you and make it real", color: "blue"},
@@ -55,7 +54,7 @@ window.addEventListener("scroll", function () {
 
 ScrollReveal().reveal((heroText), {
   scale: 0.85,
-  delay: 500,
+  delay: 300,
   reset: true,
 });
 ScrollReveal().reveal((heroImg), 
@@ -64,7 +63,7 @@ ScrollReveal().reveal((heroImg),
       x: 20,
       z: 20
   },
-  delay: 800,
+  delay: 500,
   reset: true,
   origin: 'bottom'
 
