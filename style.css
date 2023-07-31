@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Urbanist', sans-serif;
-    scroll-behavior: smooth;
     /* border: 2px solid red; */
 }
 
@@ -53,6 +52,7 @@ button { cursor: pointer; }
 body {
   background-color: var(--primary-bg-clr);
   color: var(--primary-clr);
+  scroll-behavior: smooth;
 }
 
 :focus-visible { outline-offset: 4px; }
@@ -105,11 +105,11 @@ nav{
     z-index: 2;
 }
 
-nav .logo{
+.logo{
     width: 200px;
 }
 
-nav .logo img{
+.logo img{
     width: 100%;
 }
 
@@ -120,20 +120,26 @@ nav .hero-links a{
     transition: 0.5s;
 }
 
+
 nav .hero-links a:hover{
     color: var(--secondary-clr);
 }
+
+nav .hero-links a:active{
+    color: var(--secondary-clr);
+}
+
 nav .hero-btn a, .about-text a{
     padding: 15px 20px;
     font-size: 1rem;
     font-weight: var(--fw-500);
     transition: 0.5s;
     color: var(--primary-bg-clr);
-    background-color: var(--secondary-clr);
+    background-color: var(--primary-clr);
     border-radius: 0.2rem;
 }
 nav .hero-btn a:hover, .about-text a:hover{
-    background-color: var(--primary-clr);
+    background-color: var(--secondary-clr);
 }
 
 /* main hero page styling */
@@ -185,12 +191,12 @@ main{
     font-weight: var(--fw-500);
     transition: 0.5s;
     color: var(--primary-bg-clr);
-    background-color: var(--secondary-clr);
+    background-color: var(--primary-clr);
     border-radius: 0.2rem;
 }
 
 .hero-text .hero-btn a:hover{
-    background-color: var(--primary-clr);
+    background-color: var(--secondary-clr);
 }
 .hero-img{
     width: 40%;
@@ -198,6 +204,16 @@ main{
 
 .hero-img img{
     width: 100%;
+    animation: oscillation 3s infinite;
+}
+
+@keyframes oscillation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50px); 
+    }
 }
 
 /* service styling */
@@ -209,9 +225,9 @@ main{
     padding: 100px 5%;
 }
 
-.service-section h1, .about h1, .blog h1{
+.service-section h1, .about h1, .blog h1, .contact-sec h1{
     font-size: var(--fs-1);
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-weight: var(--fw-700);
     text-align: center;
     margin-bottom: 30px;
@@ -250,7 +266,7 @@ main{
     cursor: pointer;
 }
 .service-box:hover{
-    background-color: var(--secondary-clr);
+    background-color: var(--primary-clr);
     color: var(--primary-bg-clr);
 }
 
@@ -315,7 +331,7 @@ main{
     background-color: var(--primary-bg-clr);
 }
 
-.blog h4{
+.blog h4, .contact-sec h3{
     font-size: var(--fs-6);
     line-height: 1.5rem;
     font-weight: var(--fw-600);
@@ -404,5 +420,140 @@ main{
 
 .blog-details .fa{
     margin-right: 10px;
+    color: var(--secondary-clr);
+}
+
+/* Contact section styling */
+.contact-sec{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    padding: 100px 5%;
+    background-color: var(--secondary-bg-clr);
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-container .office{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .office-flex{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.office .office-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 49%;
+    min-height: 150px;
+    border-radius: 0.3rem;
+    background-color: var(--primary-bg-clr);
+    box-shadow: var(--shadow-2);
+    padding: 2%;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.office .office-box:hover{
+    background-color: var(--primary-clr);
+    color: var(--primary-bg-clr);
+}
+
+.office .office-box:nth-child(2){
+    margin-left: 10px;
+}
+
+.office .office-box h4{
+    font-size: var(--fs-7);
+    line-height: 1.5rem;
+    font-weight: var(--fw-600);
+}
+
+.office .office-box span{
+    display: flex;
+    align-items: center;
+    color: var(--primary-clr2);
+    font-weight: var(--fw-500);
+    line-height: 1.5rem;
+}
+
+.office .office-box .fa{
+    margin-right: 10px;
+}
+
+.contact-container .form{
+    width: 49%;
+}
+
+.contact-container .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .form form input, textarea{
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    margin-bottom: 20px;
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+}
+
+.send-btn{
+    color: var(--primary-bg-clr);
+    background-color: var(--primary-clr);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    cursor: pointer;
+}
+.send-btn:hover{
+    background-color: var(--secondary-clr);
+    transition: 1s;
+}
+
+/* footer styling */
+footer{
+    position: relative;
+    top: 50px;
+    padding: 30px 5%;
+    background-color: var(--primary-clr);
+    color: var(--primary-bg-clr);
+    width: 100%;
+}
+
+.up-footer, .bottom-footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-links a{
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    font-weight: var(--fw-500);
+    transition: 0.5s;
+}
+.foot-links a .fa{
+    font-size: var(--fs-5);
+}
+footer hr{
+    margin: 30px 0;
+}
+
+
+.foot-links a:hover{
     color: var(--secondary-clr);
 }

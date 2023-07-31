@@ -46,7 +46,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-// Scroll Revel
+// Scroll Reveal
 
 // Hero Section
     let heroText = document.querySelector('.hero-text');
@@ -56,6 +56,7 @@ ScrollReveal().reveal((heroText), {
   scale: 0.85,
   delay: 300,
   reset: true,
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((heroImg), 
 {
@@ -65,7 +66,8 @@ ScrollReveal().reveal((heroImg),
   },
   delay: 500,
   reset: true,
-  origin: 'bottom'
+  origin: 'bottom',
+  viewFactor: 0.3
 
 });
 
@@ -86,24 +88,27 @@ ScrollReveal().reveal((aboutImg),
   scale: 1.60,
   delay: 300,
   reset: true,
-  origin: 'bottom'
+  origin: 'bottom',
+  viewFactor: 0.3
 
 });
 
 ScrollReveal().reveal((aboutTextP), {
   scale: 0.85,
-  delay: 500,
+  delay: 400,
   reset: true,
   rotate: {
     x: 20,
     z: 20
 },
+  viewFactor: 0.7
 });
 ScrollReveal().reveal((aboutTextBtn), {
   scale: 0.85,
   easing: 'steps(5)',
   delay: 600,
   reset: true,
+  viewFactor: 0.2
 });
 
 
@@ -123,6 +128,7 @@ ScrollReveal().reveal((serviceCol), {
   delay: 500,
   reset: true,
   easing: 'ease-out',
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((serviceIntro), {
   delay: 400,
@@ -141,11 +147,13 @@ ScrollReveal().reveal((blogHeading), {
   delay: 400,
   reset: true,
   easing: 'ease-in',
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((blogIntro), {
   delay: 300,
   reset: true,
   easing: 'ease-in',
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((blogImg), {
   scale: 0.85,
@@ -155,6 +163,7 @@ ScrollReveal().reveal((blogImg), {
     x: 70,
     z: 70
 },
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((blogText), {
   origin: 'bottom',
@@ -162,4 +171,94 @@ ScrollReveal().reveal((blogText), {
   delay: 600,
   reset: true,
   easing: 'ease-in',
+  viewFactor: 0.3
+});
+
+// contact section
+let tactIntro = document.querySelector('.tact-intro');
+let tactHeader = document.querySelector('.tact-header');
+let offices = document.querySelectorAll('.office-box');
+let input = document.querySelectorAll('input');
+let textarea = document.querySelectorAll('textarea');
+
+ScrollReveal().reveal((tactHeader), {
+  scale: 0.85,
+  delay: 400,
+  reset: true,
+  easing: 'ease-in',
+  viewFactor: 0.3
+});
+
+ScrollReveal().reveal((tactIntro), {
+  delay: 300,
+  reset: true,
+  easing: 'ease-in',
+  viewFactor: 0.3
+});
+
+ScrollReveal().reveal((offices), {
+  scale: 0.9,
+  easing: 'ease-in',
+  delay: 500,
+  reset: true,
+  viewFactor: 0.5
+});
+
+ScrollReveal().reveal((input), 
+{
+  rotate: {
+      x: -20,
+      z: -20
+  },
+  delay: 600,
+  reset: true,
+  origin: 'bottom',
+  viewFactor: 0.5
+});
+
+ScrollReveal().reveal((textarea), 
+{
+  rotate: {
+      x: -20,
+      z: -20
+  },
+  delay: 600,
+  reset: true,
+  origin: 'bottom',
+  viewFactor: 0.5
+
+});
+
+// Footer section
+let footLogo = document.querySelector('.footLogo');
+let footLinks = document.querySelectorAll('.foot-links');
+let footcc = document.querySelectorAll('.footcc');
+
+ScrollReveal().reveal((footLinks), {
+  scale: 0.9,
+  easing: 'ease-in',
+  delay: 500,
+  reset: true,
+  viewFactor: 0.5
+});
+
+ScrollReveal().reveal((footLogo), 
+{
+  rotate: {
+      x: -20,
+      z: -20
+  },
+  delay: 600,
+  reset: true,
+  origin: 'bottom',
+  viewFactor: 0.5
+});
+
+ScrollReveal().reveal((footcc), {
+  origin: 'bottom',
+  scale: 1.3,
+  delay: 600,
+  reset: true,
+  easing: 'ease-in',
+  viewFactor: 0.3
 });
