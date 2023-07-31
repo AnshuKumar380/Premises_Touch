@@ -1,3 +1,5 @@
+// import ScrollReveal from 'scrollreveal'
+
 const textHolder = document.getElementById('textHolder');
 const paragraphs = [
     { text: "Do you have a dream? We will share it with you and make it real", color: "blue"},
@@ -42,4 +44,123 @@ window.addEventListener("scroll", function () {
   } else {
     backTopBtn.classList.remove("active");
   }
+});
+
+
+// Scroll Revel
+
+// Hero Section
+    let heroText = document.querySelector('.hero-text');
+    let heroImg = document.querySelector('.hero-img');
+
+ScrollReveal().reveal((heroText), {
+  scale: 0.85,
+  delay: 500,
+  reset: true,
+});
+ScrollReveal().reveal((heroImg), 
+{
+  rotate: {
+      x: 20,
+      z: 20
+  },
+  delay: 800,
+  reset: true,
+  origin: 'bottom'
+
+});
+
+// About section
+let aboutHeading = document.querySelector('.about-heading');
+let aboutImg = document.querySelector('.about-img');
+let aboutTextP = document.querySelector('.aboutText-p');
+let aboutTextBtn = document.querySelector('.about-text-btn');
+ScrollReveal().reveal((aboutHeading), {
+  scale: 0.85,
+  delay: 300,
+  reset: true,
+  easing: 'ease-in',
+});
+
+ScrollReveal().reveal((aboutImg), 
+{
+  scale: 1.60,
+  delay: 300,
+  reset: true,
+  origin: 'bottom'
+
+});
+
+ScrollReveal().reveal((aboutTextP), {
+  scale: 0.85,
+  delay: 500,
+  reset: true,
+  rotate: {
+    x: 20,
+    z: 20
+},
+});
+ScrollReveal().reveal((aboutTextBtn), {
+  scale: 0.85,
+  easing: 'steps(5)',
+  delay: 600,
+  reset: true,
+});
+
+
+// Service Section 
+let serviceH1 = document.querySelector('.serviceH1');
+let serviceIntro = document.querySelector('.service-intro');
+let serviceCol = document.querySelectorAll('.service-col');
+ScrollReveal().reveal((serviceH1), {
+  scale: 0.85,
+  delay: 300,
+  reset: true,
+  easing: 'ease-in',
+});
+ScrollReveal().reveal((serviceCol), {
+  origin: 'bottom',
+  scale: 0.45,
+  delay: 500,
+  reset: true,
+  easing: 'ease-out',
+});
+ScrollReveal().reveal((serviceIntro), {
+  delay: 400,
+  reset: true,
+  easing: 'ease-in',
+});
+
+// Blog Section
+let blogIntro = document.querySelector('.blogIntro');
+let blogHeading = document.querySelector('.blogHeading');
+let blogImg = document.querySelectorAll('.blog-img');
+let blogText = document.querySelectorAll('.blog-text');
+
+ScrollReveal().reveal((blogHeading), {
+  scale: 0.85,
+  delay: 400,
+  reset: true,
+  easing: 'ease-in',
+});
+ScrollReveal().reveal((blogIntro), {
+  delay: 300,
+  reset: true,
+  easing: 'ease-in',
+});
+ScrollReveal().reveal((blogImg), {
+  scale: 0.85,
+  delay: 500,
+  reset: true,
+  rotate: {
+    x: 70,
+    z: 70
+},
+});
+ScrollReveal().reveal((blogText), {
+  origin: 'bottom',
+  scale: 1.3,
+  delay: 600,
+  reset: true,
+  easing: 'ease-in',
 });
