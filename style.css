@@ -103,6 +103,11 @@ nav{
     padding: 8px 5%;
     background-color: var(--secondary-bg-clr);
     z-index: 2;
+    box-shadow: var(--shadow-1);
+}
+
+.hamburger-menu {
+    display: none;
 }
 
 .logo{
@@ -140,6 +145,10 @@ nav .hero-btn a, .about-text a{
 }
 nav .hero-btn a:hover, .about-text a:hover{
     background-color: var(--secondary-clr);
+}
+
+nav .hero-btn .fa-paper-plane{
+    margin-left: 8px;
 }
 
 /* main hero page styling */
@@ -455,7 +464,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     width: 49%;
-    min-height: 150px;
+    min-height: 170px;
     border-radius: 0.3rem;
     background-color: var(--primary-bg-clr);
     box-shadow: var(--shadow-2);
@@ -556,4 +565,348 @@ footer hr{
 
 .foot-links a:hover{
     color: var(--secondary-clr);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1135px) {
+    .hero-text p{
+        font-size: var(--fs-7);
+        line-height: 2rem;
+    }
+    
+    .hero-text h1{
+        font-size: var(--fs-2);
+        line-height: 3.5rem;
+    }
+    .fade-text {
+        font-size: var(--fs-5);
+        line-height: 2.5rem;
+    }
+
+    .service-section h1, .about h1, .blog h1, .contact-sec h1{
+        font-size: var(--fs-2);
+        line-height: 3rem;
+    }
+
+    .about-text{
+        width: 50%;
+    }
+    
+    .about-text p{
+        width: 100%;
+        font-size: var(--fs-7);
+        line-height: 1.5rem;
+    }
+    
+    .about-img{
+        width: 48%;
+    }
+    
+    /* back to top styling */
+.back-top-btn {
+    bottom: 20px;
+    right: 5px;
+    font-size: 18px;
+    padding: 8px 11px;
+  }
+
+  .blog-text{
+    width: 96%;
+    padding: 2%;
+    left: 2%;
+}
+.blog-text p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 10px;
+}
+.blog-text h3{
+    font-size: var(--fs-7);
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+}
+
+.blog-details span{
+    line-height: 1rem;
+    font-size: 0.8rem;
+    font-weight: var(--fw-500);
+}
+.office .office-box span{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+}
+
+@media screen and (max-width: 850px) {
+    .logo{
+        width: 80px;
+    }
+
+    nav{
+        padding: 10px 5%;
+    }
+    
+    .hamburger-menu {
+    display: block;
+    height: 40px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  .ham-bar {
+    width: 71%;
+    height: 4px;
+    background-color: var(--primary-clr);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, opacity .8s, top .6s;
+  }
+
+  .bar-top {
+    top: 25%;
+  }
+
+  .bar-bottom {
+    top: 75%;
+  }
+
+  .hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+
+  .hamburger-menu.active .bar-mid {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+
+  .hero-links {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    right: -100%;
+    height: 260px;
+    width: 100%;
+    transition: right .5s;
+    background: var(--primary-clr);
+    color: var(--primary-bg-clr);
+    box-shadow: 2px 1px 2px var(--primary-bg-clr);
+    text-align: center;
+    z-index: 4;
+  }
+
+  .hero-links a {
+    padding: 20px 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .hero-links a:nth-child(1){
+    margin-top: 25px;
+  }
+
+  .hero-links a:hover{
+    color: var(--primary-clr2) !important;
+  }
+
+  .hero-links.active {
+    right: 0;
+  }
+
+  nav .hero-btn a, .about-text a{
+    padding: 11px 15px;
+    font-size: 0.8rem;
+}
+
+  main{
+    position: relative;
+    top: 20px;
+    flex-direction: column-reverse;
+    padding: 60px 5%;
+}
+
+.hero-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text p{
+    text-align: center;
+}
+
+.hero-text h1{
+    text-align: center;
+}
+.text-container{
+    margin-bottom: 50px;
+}
+.fade-text {
+    text-align: center;
+    display: inline-block;
+}
+
+.hero-img{
+    width: 100%;
+}
+
+.hero-img img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@keyframes oscillation {
+    0%, 100% {
+        transform: translateX(5);
+    }
+    50% {
+        transform: translateX(-10px); 
+    }
+}
+
+.service-section h1, .about h1, .blog h1, .contact-sec h1{
+    font-size: var(--fs-3);
+    line-height: 2.5rem;
+}
+
+.service-section, .about, .blog{
+    top: 20px;
+    padding: 80px 5%;
+}
+
+.blog{
+    padding-bottom: 0;
+}
+
+.service-col{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-box{
+    flex-direction: column;
+    padding: 2%;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 30px;
+}
+
+.service-box h2{
+    font-size: var(--fs-6);
+    line-height: 2rem;
+}
+.about-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-text{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img{
+    width: 100%;
+}
+.blog-container{
+    flex-direction: column;
+    width: 100%;
+}
+.blog-container:nth-child(1){
+    margin-bottom: 200px;
+}
+
+.blog-box{
+    width: 100%;
+    position: relative;
+}
+.blog-box:nth-child(1){
+    margin-bottom: 250px;
+}
+
+.blog-img{
+    width: 100%;
+    height: 200px;
+}
+
+.blog-img img{
+    width: 100%;
+    height: 200px;
+}
+
+.blog-text{
+    min-height: 180px;
+}
+
+.contact-container{
+    flex-direction: column-reverse;
+}
+
+.contact-container .office{
+    width: 100%;
+    flex-direction: column;
+}
+.contact-container .office-flex{
+    flex-direction: column;
+    width: 100%;
+}
+.office .office-box{
+    flex-direction: column;
+    width: 100%;
+    min-height: 120px;
+    padding: 3%;
+}
+
+.office .office-box:nth-child(2){
+    margin-left: 0px;
+}
+
+.contact-container .form{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.up-footer, .bottom-footer{
+    flex-direction: column;
+}
+
+.footLogo{
+    margin-bottom: 20px;
+    width: 120px;
+}
+
+.foot-links a{
+    padding: 10px 5px;
+    font-size: 1rem;
+}
+.foot-links a .fa{
+    margin: 5px 10px;
+}
+footer hr{
+    margin: 20px 0;
+}
+
+.footcc{
+    text-align: center;
+    line-height: 1.5rem;
+    margin-bottom: 15pxs;
+}
+
 }

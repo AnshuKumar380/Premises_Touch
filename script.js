@@ -1,3 +1,11 @@
+// Hamburger
+const hamMenu = document.querySelector(".hamburger-menu");
+const offScreenMenu = document.querySelector(".nav-links");
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
+
 // Changing text in hero section
 const textHolder = document.getElementById('textHolder');
 const paragraphs = [
@@ -61,12 +69,12 @@ ScrollReveal().reveal((heroText), {
 ScrollReveal().reveal((heroImg), 
 {
   rotate: {
-      x: 20,
-      z: 20
+      x: 7,
+      z: 6
   },
+  easing: 'ease-in',
   delay: 500,
   reset: true,
-  origin: 'bottom',
   viewFactor: 0.3
 
 });
@@ -85,7 +93,7 @@ ScrollReveal().reveal((aboutHeading), {
 
 ScrollReveal().reveal((aboutImg), 
 {
-  scale: 1.60,
+  scale: 0.3,
   delay: 300,
   reset: true,
   origin: 'bottom',
@@ -94,14 +102,14 @@ ScrollReveal().reveal((aboutImg),
 });
 
 ScrollReveal().reveal((aboutTextP), {
-  scale: 0.85,
+  scale: 0.8,
   delay: 400,
   reset: true,
   rotate: {
-    x: 20,
-    z: 20
+    x: 9,
+    z: 9
 },
-  viewFactor: 0.7
+  viewFactor: 0.3
 });
 ScrollReveal().reveal((aboutTextBtn), {
   scale: 0.85,
@@ -115,7 +123,7 @@ ScrollReveal().reveal((aboutTextBtn), {
 // Service Section 
 let serviceH1 = document.querySelector('.serviceH1');
 let serviceIntro = document.querySelector('.service-intro');
-let serviceCol = document.querySelectorAll('.service-col');
+let serviceCol = document.querySelectorAll('.service-box');
 ScrollReveal().reveal((serviceH1), {
   scale: 0.85,
   delay: 300,
@@ -167,7 +175,7 @@ ScrollReveal().reveal((blogImg), {
 });
 ScrollReveal().reveal((blogText), {
   origin: 'bottom',
-  scale: 1.3,
+  scale: 0.95,
   delay: 600,
   reset: true,
   easing: 'ease-in',
@@ -182,7 +190,7 @@ let input = document.querySelectorAll('input');
 let textarea = document.querySelectorAll('textarea');
 
 ScrollReveal().reveal((tactHeader), {
-  scale: 0.85,
+  scale: 0.9,
   delay: 400,
   reset: true,
   easing: 'ease-in',
@@ -201,31 +209,30 @@ ScrollReveal().reveal((offices), {
   easing: 'ease-in',
   delay: 500,
   reset: true,
-  viewFactor: 0.5
+  viewFactor: 0.4
 });
 
 ScrollReveal().reveal((input), 
 {
   rotate: {
-      x: -20,
-      z: -20
+      x: 10,
+      z: 9
   },
   delay: 600,
   reset: true,
   origin: 'bottom',
-  viewFactor: 0.5
+  viewFactor: 0.4
 });
 
 ScrollReveal().reveal((textarea), 
 {
   rotate: {
-      x: -20,
-      z: -20
+      x: 10,
+      z: 9
   },
   delay: 600,
   reset: true,
-  origin: 'bottom',
-  viewFactor: 0.5
+  viewFactor: 0.4
 
 });
 
@@ -235,29 +242,29 @@ let footLinks = document.querySelectorAll('.foot-links');
 let footcc = document.querySelectorAll('.footcc');
 
 ScrollReveal().reveal((footLinks), {
-  scale: 0.9,
+  scale: 0.85,
   easing: 'ease-in',
-  delay: 500,
+  delay: 400,
   reset: true,
-  viewFactor: 0.5
+  viewFactor: 0.3
 });
 
 ScrollReveal().reveal((footLogo), 
 {
   rotate: {
-      x: -20,
-      z: -20
+      x: 10,
+      z: 9
   },
-  delay: 600,
+  delay: 300,
   reset: true,
   origin: 'bottom',
-  viewFactor: 0.5
+  viewFactor: 0.3
 });
 
 ScrollReveal().reveal((footcc), {
   origin: 'bottom',
-  scale: 1.3,
-  delay: 600,
+  scale: 0.85,
+  delay: 500,
   reset: true,
   easing: 'ease-in',
   viewFactor: 0.3
