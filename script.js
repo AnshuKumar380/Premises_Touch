@@ -187,6 +187,7 @@ let tactIntro = document.querySelector('.tact-intro');
 let tactHeader = document.querySelector('.tact-header');
 let offices = document.querySelectorAll('.office-box');
 let input = document.querySelectorAll('input');
+let sendBtn = document.querySelectorAll('.send-btn');
 let textarea = document.querySelectorAll('textarea');
 
 ScrollReveal().reveal((tactHeader), {
@@ -213,6 +214,17 @@ ScrollReveal().reveal((offices), {
 });
 
 ScrollReveal().reveal((input), 
+{
+  rotate: {
+      x: 10,
+      z: 9
+  },
+  delay: 600,
+  reset: true,
+  origin: 'bottom',
+  viewFactor: 0.4
+});
+ScrollReveal().reveal((sendBtn), 
 {
   rotate: {
       x: 10,

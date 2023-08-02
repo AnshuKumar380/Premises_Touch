@@ -137,18 +137,31 @@ nav .hero-links a:active{
 nav .hero-btn a, .about-text a{
     padding: 15px 20px;
     font-size: 1rem;
-    font-weight: var(--fw-500);
+    font-weight: var(--fw-700);
     transition: 0.5s;
     color: var(--primary-bg-clr);
     background-color: var(--primary-clr);
+    border: 2px solid var(--primary-clr);
     border-radius: 0.2rem;
+    display: block;
+	overflow: hidden;
+    width: 180px;
+    text-align: center;
 }
-nav .hero-btn a:hover, .about-text a:hover{
-    background-color: var(--secondary-clr);
+
+nav .hero-btn a:hover, .about-text a:hover {
+    background: linear-gradient(45deg, var(--primary-bg-clr) 0%, var(--primary-bg-clr) 50%, var(--primary-clr) 50%, var(--primary-clr) 100%);
+    background-size: 200% 200%;
+    background-position: 100% 0;
+    transition: background-position 1s;
 }
 
 nav .hero-btn .fa-paper-plane{
     margin-left: 8px;
+}
+
+.contact4Mobile{
+    display: none;
 }
 
 /* main hero page styling */
@@ -195,18 +208,28 @@ main{
 }
 
 .hero-text .hero-btn a{
-    padding: 15px 50px;
+    padding: 15px 30px;
     font-size: 1rem;
-    font-weight: var(--fw-500);
+    font-weight: var(--fw-700);
     transition: 0.5s;
     color: var(--primary-bg-clr);
     background-color: var(--primary-clr);
+    border: 2px solid var(--primary-clr);
     border-radius: 0.2rem;
+    display: block;
+	overflow: hidden;
+    width: 180px;
+    text-align: center;
 }
 
-.hero-text .hero-btn a:hover{
-    background-color: var(--secondary-clr);
+.hero-text .hero-btn a:hover {
+    background: linear-gradient(45deg, var(--primary-bg-clr) 0%, var(--primary-bg-clr) 50%, var(--primary-clr) 50%, var(--primary-clr) 100%);
+    background-size: 200% 200%;
+    background-position: 100% 0;
+    transition: background-position 1s;
 }
+
+
 .hero-img{
     width: 40%;
 }
@@ -405,6 +428,7 @@ main{
 .blog-text h3:hover{
     color: var(--secondary-clr);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .blog-text p{
@@ -521,15 +545,29 @@ main{
 }
 
 .send-btn{
+    padding: 15px 30px;
+    font-size: var(--fs-7);
+    font-weight: var(--fw-700);
+    transition: 0.5s;
     color: var(--primary-bg-clr);
     background-color: var(--primary-clr);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-700);
-    cursor: pointer;
+    border: 2px solid var(--primary-clr);
+    border-radius: 0.2rem;
+    display: block;
+	overflow: hidden;
+    width: 100%;
+    text-align: center;
 }
-.send-btn:hover{
-    background-color: var(--secondary-clr);
-    transition: 1s;
+
+.send-btn:hover {
+    background: linear-gradient(45deg, var(--primary-bg-clr) 0%, var(--primary-bg-clr) 50%, var(--primary-clr) 50%, var(--primary-clr) 100%);
+    background-size: 200% 200%;
+    background-position: 100% 0;
+    transition: background-position 1s;
+}
+
+.send-btn .fa{
+    margin-left: 10px;
 }
 
 /* footer styling */
@@ -639,13 +677,21 @@ footer hr{
 
 @media screen and (max-width: 850px) {
     .logo{
-        width: 80px;
+        width: 100px;
     }
 
     nav{
         padding: 10px 5%;
     }
     
+    nav .hero-btn{
+        display: none;
+    }
+
+    .contact4Mobile{
+        display: block;
+    }
+
     .hamburger-menu {
     display: block;
     height: 40px;
@@ -696,7 +742,7 @@ footer hr{
     flex-direction: column;
     top: 60px;
     right: -100%;
-    height: 260px;
+    height: 290px;
     width: 100%;
     transition: right .5s;
     background: var(--primary-clr);
@@ -722,11 +768,6 @@ footer hr{
   .hero-links.active {
     right: 0;
   }
-
-  nav .hero-btn a, .about-text a{
-    padding: 11px 15px;
-    font-size: 0.8rem;
-}
 
   main{
     position: relative;
