@@ -114,8 +114,13 @@ nav{
     width: 200px;
 }
 
-.logo img{
-    width: 100%;
+.logo a{
+    font-size: var(--fs-2);
+    font-weight: var(--fw-800);
+}
+
+.logo a span{
+    color: #ffbe48
 }
 
 nav .hero-links a{
@@ -676,8 +681,8 @@ footer hr{
 }
 
 @media screen and (max-width: 850px) {
-    .logo{
-        width: 100px;
+    .logo a{
+        font-size: var(--fs-4);
     }
 
     nav{
