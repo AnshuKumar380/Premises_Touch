@@ -115,7 +115,7 @@ nav{
 }
 
 .logo a{
-    font-size: var(--fs-2);
+    font-size: 3.0rem;
     font-weight: var(--fw-800);
 }
 
