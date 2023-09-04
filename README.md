@@ -1,7 +1,7 @@
 # edu-consults
 - A responsive and interactive education website for educational consultancy and other special purposes.
     
-    - Live Link :: [Go Live](https://iamnaeto.github.io/edu-consults/)
+    - Live Link :: [Go Live](https://edu-consults.vercel.app/)
     
 ## Author: Charles Obimnaeto Egesionu ##
 
