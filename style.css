@@ -239,28 +239,103 @@
     width: auto;
   }
   
-  .hero-img {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 16 / 9; /* Optional: Keeps it proportionate */
+  .hero-img-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.college-card {
+    flex: 0 0 250px; /* fixed width so 4 cards fit nicely on wide screens */
+    background: #fff;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.hero-img img {
-    position: absolute;
+.college-card:hover {
+    transform: translateY(-5px);
+}
+
+.college-card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image covers without distortion */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    image-rendering: auto; /* Helps improve clarity */
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
 }
 
-.hero-img img.active {
-    opacity: 1;
-    z-index: 1;
+.college-card h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
 }
+
+.college-card p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Hide scroll bar for a cleaner look */
+.hero-img-scroll::-webkit-scrollbar {
+    display: none;
+}
+.hero-img-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .college-card {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .college-card {
+        flex: 0 0 160px;
+    }
+
+    .college-card img {
+        height: 120px;
+    }
+
+    .college-card h3 {
+        font-size: 14px;
+    }
+
+    .college-card p {
+        font-size: 12px;
+    }
+}
+
+.hero-img-scroll {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* or 'left' like you had */
+  padding-top: 60px; /* space for the overlay text */
+}
+
+.section-overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 5px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  z-index: 10;
+  
+  color: rgb(16, 175, 223);
+}
+
 
   
   @keyframes float {
